@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:proyecto_final/application/riverpod.dart';
+import 'package:proyecto_final/presentation/settings/product_type_page.dart';
+import 'package:proyecto_final/presentation/settings/user_page.dart';
 
 class Presentation extends ConsumerWidget {
   Presentation({super.key});
@@ -17,6 +19,9 @@ class Presentation extends ConsumerWidget {
         padding: EdgeInsets.all(5),
         child: Column(
           children: [
+            UserPage(),
+            SizedBox(height: 20),
+            ProductTypePage(),
             TextField(
               controller: valueController,
               keyboardType: TextInputType.number,
